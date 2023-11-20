@@ -1,0 +1,9 @@
+.itemform{
+    margin-top: 0.5rem;
+}
+
+#form{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 30px 30px;
+}
