@@ -5,6 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Abastecimento</title>
+    <style>
+        .slider{
+        overflow: hidden;
+
+        }
+        .slider > .slider-content{
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+            transition: all 500ms ease;
+
+        }
+
+        .slider > .slider-content > .slider-item {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+
+        .slider > input:nth-child(1):checked ~ .slider-content{
+            transform: translateX(0%);
+        }
+
+        .slider > input:nth-child(2):checked ~ .slider-content{
+            transform: translateX(-100%);
+        }
+        .slider > input:nth-child(3):checked ~ .slider-content{
+            transform: translateX(-200%);
+        }
+
+        .slider > input:nth-child(4):checked ~ .slider-content{
+            transform: translateX(-300%);
+        }
+    </style>
 </head>
 <body>
     <div>
@@ -28,6 +61,20 @@
             <button type="reset">Cancelar</button>
             <button type="submit">Calcular</button>
         </div>
+    </div>
+    <div>
+        <section class="slider">
+            <input name='slide' type="radio" checked >
+            <input name='slide' type="radio">
+            <input name='slide' type="radio">
+            <input name='slide' type="radio">
+            <div class="slider-content">
+                <div class="slider-item"><img src="https://assets-blog.hostgator.com.br/wp-content/uploads/2016/09/logica-de-programacao-blog.webp" alt=""></div>
+                <div class="slider-item"><img src="https://universidadedatecnologia.com.br/wp-content/uploads/2017/12/o-que-%C3%A9-ling-prog.jpg" alt="" srcset=""></div>
+                <div class="slider-item"><img src="https://ferreiranews.com.br/wp-content/uploads/2023/07/interna-blog-coding-05.jpg" alt="" srcset=""></div>
+                <div class="slider-item">Item de fim</div>
+            </div>
+        </section>
     </div>
     <script>
         
